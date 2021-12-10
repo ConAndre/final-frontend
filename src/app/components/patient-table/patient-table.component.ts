@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Patient } from 'src/app/models/Patient.model';
+import { PatientService } from 'src/app/services/patient.service';
 
 @Component({
   selector: 'app-patient-table',
@@ -8,7 +9,7 @@ import { Patient } from 'src/app/models/Patient.model';
 })
 export class PatientTableComponent implements OnInit {
 
-  constructor() {
+  constructor(private patientService: PatientService) {
 
   }
 
@@ -19,6 +20,7 @@ export class PatientTableComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.patientService.findAllPatients().then((patients: Patient[]) => this.patients = patients)
   }
 
 }
