@@ -5,6 +5,7 @@
     <th>Age</th>
     <th>Date</th>
     <th>Manufacturer</th>
+    <th>Dose</th>
   </tr>
   <tr *ngFor="let patient of patients; let i = index">
     <td>
@@ -14,6 +15,7 @@
     <td>{{patient.age}}</td>
     <td>{{patient.date}}</td>
     <td>{{patient.manufacturer}}</td>
+    <td>{{patient.dose}}</td>
   </tr>
 </table>
 

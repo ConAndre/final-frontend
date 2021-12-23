@@ -14,8 +14,8 @@ export class PatientTableComponent implements OnInit {
   }
 
   patients : Patient[] = [
-    {name: 'andre', age: 22, date: new Date(), manufacturer: 'Moderna'},
-    {name: 'bob', age: 2, date: new Date(1000), manufacturer: 'Pfyzer'},
+    // {name: 'andre', age: 22, date: new Date(), manufacturer: 'Moderna', dose: '1st'},
+    // {name: 'bob', age: 2, date: new Date(1000), manufacturer: 'Pfyzer', dose: 'booster'},
   ];
 
 

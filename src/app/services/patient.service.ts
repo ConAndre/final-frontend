@@ -4,8 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PatientService {
+  url = 'http://javaandreprojectfinal-env.eba-rj9hckem.us-east-2.elasticbeanstalk.com/api/v1/patients'
   findAllPatients = (): Promise<any> => {
-    return fetch('http://localhost:8080/api/patients').then(response => response.json())
+    return fetch(this.url).then(response => response.json())
   }
   constructor() { }
 }
